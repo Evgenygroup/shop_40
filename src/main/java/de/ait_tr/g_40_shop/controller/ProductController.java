@@ -29,14 +29,19 @@ public class ProductController {
     // Get products - GET - localhost:8080/products
     // Get products - GET - localhost:8080/products?id=3
 
+    // 1. Запрос всех продуктов разрешим всем, в том числе анонимным пользователям.
+    // 2. Запрос одного продукта по идентификатору разрешим авторизованным
+    //    пользователям с любой ролью.
+    // 3. Сохранение продукта в БД разрешим только админам.
+
     @GetMapping
-    public List<ProductDto> get(@RequestParam(required = false) Long id) {
-        if (id == null) {
-            return service.getAllActiveProducts();
-        } else {
-            ProductDto product = service.getById(id);
-            return product == null ? null : List.of(product);
-        }
+    public ProductDto getById(@RequestParam Long id) {
+        return service.getById(id);
+    }
+
+    @GetMapping("/all")
+    public List<ProductDto> getAll() {
+        return service.getAllActiveProducts();
     }
 
     // Get products - GET - localhost:8080/products/3
