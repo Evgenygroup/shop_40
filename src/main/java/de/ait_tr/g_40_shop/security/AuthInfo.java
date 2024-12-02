@@ -51,5 +51,5 @@ public class AuthInfo implements Authentication {
     @Override
     public String getName() {
         return username;
-    }
+    } // если бы был реальный user
 }

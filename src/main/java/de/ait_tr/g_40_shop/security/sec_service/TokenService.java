@@ -37,7 +37,8 @@ public class TokenService {
     public String generateAccessToken(User user) {
         LocalDateTime currentDate = LocalDateTime.now();
         Instant expiration = currentDate.plusDays(7).atZone(ZoneId.systemDefault()).toInstant();
-        Date expirationDate = Date.from(expiration);
+       // Instant expiration = currentDate.plusDays(7).atZone(ZoneId.systemDefault()).toInstant(); // так сложно все потому что  обьект должен быть типа Instant, так уж сделали оракл программисты
+        Date expirationDate = Date.from(expiration); //
 
         return Jwts.builder()
                 .subject(user.getUsername())

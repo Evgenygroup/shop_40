@@ -23,6 +23,18 @@ public class User implements UserDetails {
     @Column(name = "password")
     private String password;
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "user_role",
