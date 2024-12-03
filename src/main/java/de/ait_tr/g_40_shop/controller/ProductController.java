@@ -1,6 +1,8 @@
 package de.ait_tr.g_40_shop.controller;
 
 import de.ait_tr.g_40_shop.domain.dto.ProductDto;
+import de.ait_tr.g_40_shop.exception_handling.Response;
+import de.ait_tr.g_40_shop.exception_handling.exceptions.FirstTestException;
 import de.ait_tr.g_40_shop.service.interfaces.ProductService;
 import org.springframework.web.bind.annotation.*;
 
@@ -92,5 +94,16 @@ public class ProductController {
     @GetMapping("/average-price")
     public BigDecimal getAveragePrice() {
         return service.getActiveProductsAveragePrice();
+    }
+
+    // 1 способ обработки исключений
+    // ПЛЮС -  точечно настраиваем обработчик ошибок именно для данного контроллера,
+    //         если нам требуется разная логика обработки исключений в разных контроллерах
+    // МИНУС - если нам не требуется разная логика для разных контроллеров,
+    //         придётся создавать такие одинаковые обработчики в каждом контроллере
+    @ExceptionHandler(FirstTestException.class)
+//    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public Response handleException(FirstTestException e) {
+        return new Response(e.getMessage());
     }
 }

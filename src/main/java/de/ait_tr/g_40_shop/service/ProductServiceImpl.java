@@ -2,6 +2,7 @@ package de.ait_tr.g_40_shop.service;
 
 import de.ait_tr.g_40_shop.domain.dto.ProductDto;
 import de.ait_tr.g_40_shop.domain.entity.Product;
+import de.ait_tr.g_40_shop.exception_handling.exceptions.FirstTestException;
 import de.ait_tr.g_40_shop.repository.ProductRepository;
 import de.ait_tr.g_40_shop.service.interfaces.ProductService;
 import de.ait_tr.g_40_shop.service.mapping.ProductMappingService;
@@ -64,7 +65,7 @@ public class ProductServiceImpl implements ProductService {
         Product product = repository.findById(id).orElse(null);
 
         if (product == null || !product.isActive()) {
-            throw new RuntimeException("Product not found");
+            throw new FirstTestException(String.format("Product with id %d not found",id));
         }
 
         return mappingService.mapEntityToDto(product);
