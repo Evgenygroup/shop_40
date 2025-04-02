@@ -2,7 +2,9 @@ package de.ait_tr.g_40_shop.service;
 
 import de.ait_tr.g_40_shop.domain.dto.ProductDto;
 import de.ait_tr.g_40_shop.domain.entity.Product;
-import de.ait_tr.g_40_shop.exception_handling.exceptions.FirstTestException;
+import de.ait_tr.g_40_shop.exception_handling.exceptions.FourthTestException;
+import de.ait_tr.g_40_shop.exception_handling.exceptions.ProductNotSavedException;
+import de.ait_tr.g_40_shop.exception_handling.exceptions.ThirdTestException;
 import de.ait_tr.g_40_shop.repository.ProductRepository;
 import de.ait_tr.g_40_shop.service.interfaces.ProductService;
 import de.ait_tr.g_40_shop.service.mapping.ProductMappingService;
@@ -29,7 +31,14 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ProductDto save(ProductDto dto) {
         Product entity = mappingService.mapDtoToEntity(dto);
-        repository.save(entity);
+
+        try {
+            repository.save(entity);
+        } catch (Exception e) {
+          //  throw new FourthTestException(e.getMessage());
+            throw new ProductNotSavedException(e.getMessage());
+        }
+
         return mappingService.mapEntityToDto(entity);
     }
 
@@ -54,18 +63,29 @@ public class ProductServiceImpl implements ProductService {
 //        return products;
     }
 
+//    @Override
+//    public ProductDto getById(Long id) {
+//
+    // Демонстрация логирования на разные уровни
+//        logger.info("Method getById called with parameter {}", id);
+//        logger.warn("Method getById called with parameter {}", id);
+//        logger.error("Method getById called with parameter {}", id);
+//
+//        Product product = repository.findById(id).orElse(null);
+//
+//        if (product == null || !product.isActive()) {
+//            return null;
+//        }
+//
+//        return mappingService.mapEntityToDto(product);
+//    }
+
     @Override
     public ProductDto getById(Long id) {
-
-        // демонстрация логгера
-//        logger.info("Method getById called with id = {}",id);
-//        logger.warn("Method getById called with id = {}",id);
-//        logger.error("Method getById called with id = {}",id);
-
         Product product = repository.findById(id).orElse(null);
 
         if (product == null || !product.isActive()) {
-            throw new FirstTestException(String.format("Product with id %d not found",id));
+            throw new ThirdTestException(String.format("Product with id %d not found", id));
         }
 
         return mappingService.mapEntityToDto(product);

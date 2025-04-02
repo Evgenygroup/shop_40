@@ -1,6 +1,7 @@
 package de.ait_tr.g_40_shop.exception_handling;
 
 import de.ait_tr.g_40_shop.exception_handling.exceptions.FourthTestException;
+import de.ait_tr.g_40_shop.exception_handling.exceptions.ProductNotSavedException;
 import de.ait_tr.g_40_shop.exception_handling.exceptions.ThirdTestException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,5 +29,12 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Response> handleException(FourthTestException e) {
         Response response = new Response(e.getMessage());
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
+
+    //my homework
+    @ExceptionHandler(ProductNotSavedException.class)
+    public ResponseEntity<Response>handleException(ProductNotSavedException e){
+        Response response = new Response(e.getMessage());
+        return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
     }
 }
