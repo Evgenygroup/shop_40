@@ -96,14 +96,27 @@ public class ProductServiceImpl implements ProductService {
         return null;
     }
 
+
+    // Method My edition 09.04.25
     @Override
     public void deleteById(Long id) {
+        Product product = repository.findById(id).orElse(null);
+
+        if (product == null || !product.isActive()) {
+            throw new ThirdTestException(String.format("Product with id %d not found", id));
+        }
+        else repository.deleteById(id);
 
     }
 
+    // My edition 09.04.25
     @Override
     public void deleteByTitle(String title) {
-
+        Product product = repository.findProductByTitle(title).orElse(null);
+        if (product == null || !product.isActive()) {
+            throw new ThirdTestException(String.format("Product with id %d not found", title));
+        }
+        else repository.deleteById(product.getId());
     }
 
     @Override

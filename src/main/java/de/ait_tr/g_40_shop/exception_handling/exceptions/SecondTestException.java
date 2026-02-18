@@ -1,6 +1,7 @@
 package de.ait_tr.g_40_shop.exception_handling.exceptions;
 
 import org.springframework.http.HttpStatus;
+
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 // 2 способ обработки ошибок

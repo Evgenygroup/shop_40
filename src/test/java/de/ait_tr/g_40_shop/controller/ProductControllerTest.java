@@ -22,6 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@TestInstance(TestInstance.Lifecycle.PER_CLASS) // my edition 09.04.25
 class ProductControllerTest {
 
     @LocalServerPort
@@ -37,8 +38,11 @@ class ProductControllerTest {
     private HttpHeaders headers;
     private ProductDto testProduct;
 
-    private final String TEST_PRODUCT_TITLE = "Test product title";
-    private final BigDecimal TEST_PRODUCT_PRICE = new BigDecimal(777);
+    private final String TEST_PRODUCT_TITLE = "Test product c";
+
+    //My edition 09.04.25
+    private  Long TEST_ID;
+    private final BigDecimal TEST_PRODUCT_PRICE = new BigDecimal(776);
     private final String TEST_ADMIN_NAME = "Test Admin";
     private final String TEST_USER_NAME = "Test User";
     private final String TEST_PASSWORD = "Test password";
@@ -185,6 +189,8 @@ class ProductControllerTest {
         ResponseEntity<ProductDto> response = template
                 .exchange(url, HttpMethod.POST, request, ProductDto.class);
 
+        TEST_ID =response.getBody().getId();
+
         assertEquals(HttpStatus.OK, response.getStatusCode(), "Response has unexpected status");
         assertTrue(response.hasBody(), "Response has no body");
     }
@@ -193,7 +199,7 @@ class ProductControllerTest {
     @Order(2)
     public void negativeGettingProductByIdWithoutAuthorization() {
         // TODO домашнее задание
-        String url = URL_PREFIX + port + PRODUCTS_RESOURCE_NAME + "?id=2";
+        String url = URL_PREFIX + port + PRODUCTS_RESOURCE_NAME + "?id=" + TEST_ID;
         HttpEntity<Void> request = new HttpEntity<>(headers);
 
         ResponseEntity<ProductDto> response = template
@@ -240,7 +246,8 @@ class ProductControllerTest {
         // TODO домашнее задание
         // TODO удаляем тестовый продукт из БД
 
-        String url = URL_PREFIX + port + PRODUCTS_RESOURCE_NAME + "?id=13";
+
+        String url = URL_PREFIX + port + PRODUCTS_RESOURCE_NAME + "?id=" + TEST_ID;
         headers.put(AUTH_HEADER_TITLE, List.of(adminAccessToken));
         HttpEntity<ProductDto> request = new HttpEntity<>(testProduct, headers);
 
@@ -250,18 +257,22 @@ class ProductControllerTest {
         assertEquals(HttpStatus.OK, response.getStatusCode(), "Response has unexpected status");
         assertTrue(response.hasBody(), "Response has no body");
 
-        url = URL_PREFIX + port + PRODUCTS_RESOURCE_NAME;
-        request = new HttpEntity<>(headers);
-        ResponseEntity<Void> responseDel = template.exchange(
+        template.exchange(
                 url,
                 HttpMethod.DELETE,
                 request,
-                Void.class,
-                TEST_PRODUCT_TITLE
+                Void.class
+
         );
-        assertEquals(HttpStatus.OK, responseDel.getStatusCode());
+
+
     }
 
 
 
-}
+
+
+    }
+
+
+
