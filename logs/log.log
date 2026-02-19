@@ -49,3 +49,13 @@
 2026-02-19T12:19:54.327+01:00  INFO 9696 --- [g-40-shop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
 2026-02-19T12:19:54.887+01:00  INFO 9696 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2026-02-19T12:19:54.895+01:00  INFO 9696 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Started G40ShopApplication in 6.188 seconds (process running for 7.626)
+2026-02-19T13:47:54.021+01:00  WARN 9696 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m32s77ms295µs600ns).
+2026-02-19T14:37:58.405+01:00  WARN 9696 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m4s149ms120µs).
+2026-02-19T15:34:38.914+01:00  WARN 9696 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m10s434ms561µs800ns).
+2026-02-19T17:28:14.945+01:00  WARN 9696 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h47m35s929ms67µs900ns).
+2026-02-19T17:28:58.993+01:00  INFO 9696 --- [g-40-shop] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-19T17:28:58.994+01:00  INFO 9696 --- [g-40-shop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-19T17:28:59.013+01:00  INFO 9696 --- [g-40-shop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2026-02-19T17:29:15.255+01:00  INFO 9696 --- [g-40-shop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-19T17:29:15.265+01:00  INFO 9696 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-19T17:29:15.274+01:00  INFO 9696 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

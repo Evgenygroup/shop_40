@@ -15,7 +15,7 @@ spring:
 
   mail:
     username: eugene.grazhdansky@gmail.com
-    password: uyiwbuowfgardrof
+    password: qwerty
     host: smtp.gmail.com
     port: 587
     properties:
