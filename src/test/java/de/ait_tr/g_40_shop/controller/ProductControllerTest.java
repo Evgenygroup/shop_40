@@ -56,6 +56,7 @@ class ProductControllerTest {
     private final String ALL_ENDPOINT = "/all";
 
     // Bearer wrer897fd897bc98b7fs8df79f8adsf
+
     private final String BEARER_PREFIX = "Bearer ";
     private final String AUTH_HEADER_TITLE = "Authorization";
     private String adminAccessToken;

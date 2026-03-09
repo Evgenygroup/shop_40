@@ -7,9 +7,5 @@ import java.util.Optional;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-    //My edition 09.04.25
-    Optional<Product> findProductByTitle(String title);
-
-    @Override
-    void delete(Product entity);
+    Optional<Product> findByTitle(String title);
 }

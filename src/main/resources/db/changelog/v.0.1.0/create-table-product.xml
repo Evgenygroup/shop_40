@@ -5,6 +5,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
 
     <changeSet id="create-table-product" author="Andrey">
+
         <createTable tableName="product">
 
             <column name="id" type="bigint" autoIncrement="true">
@@ -15,15 +16,16 @@
                 <constraints nullable="false" unique="true"/>
             </column>
 
-            <column name="price" type="decimal(7,2)" >
+            <column name="price" type="decimal(7,2)">
                 <constraints nullable="false"/>
             </column>
 
-            <column name="active" type="boolean" >
+            <column name="active" type="boolean">
                 <constraints nullable="false"/>
             </column>
 
         </createTable>
+
     </changeSet>
 
 </databaseChangeLog>

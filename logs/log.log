@@ -1,61 +1,50 @@
-2026-02-19T12:19:49.098+01:00  INFO 9696 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Starting G40ShopApplication using Java 17.0.5 with PID 9696 (C:\Users\EvgenyJava\g-40-shop\target\classes started by mailf in C:\Users\EvgenyJava\g-40-shop)
-2026-02-19T12:19:49.105+01:00  INFO 9696 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : The following 1 profile is active: "dev"
-2026-02-19T12:19:49.721+01:00  INFO 9696 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-19T12:19:49.780+01:00  INFO 9696 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 3 JPA repository interfaces.
-2026-02-19T12:19:50.630+01:00  INFO 9696 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-02-19T12:19:50.647+01:00  INFO 9696 --- [g-40-shop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-19T12:19:50.648+01:00  INFO 9696 --- [g-40-shop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
-2026-02-19T12:19:50.731+01:00  INFO 9696 --- [g-40-shop] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-02-19T12:19:50.731+01:00  INFO 9696 --- [g-40-shop] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1585 ms
-2026-02-19T12:19:50.908+01:00  INFO 9696 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-02-19T12:19:51.104+01:00  INFO 9696 --- [g-40-shop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7d50f2a8
-2026-02-19T12:19:51.106+01:00  INFO 9696 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-02-19T12:19:51.333+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.database                       : Set default schema name to public
-2026-02-19T12:19:52.072+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
-2026-02-19T12:19:52.184+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.lockservice                    : Successfully acquired change log lock
-2026-02-19T12:19:52.185+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.command                        : Using deploymentId: 1499992185
-2026-02-19T12:19:52.188+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
-2026-02-19T12:19:52.197+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.ui                             : Running Changeset: db/changelog/v.0.3.0/changelog.xml::add-tag-0.3.0::Andrey
-2026-02-19T12:19:52.200+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.changelog                      : Tag 'v.0.3.0' applied to database
-2026-02-19T12:19:52.201+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.changelog                      : ChangeSet db/changelog/v.0.3.0/changelog.xml::add-tag-0.3.0::Andrey ran successfully in 3ms
-2026-02-19T12:19:52.207+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.ui                             : Running Changeset: db/changelog/v.0.3.0/create-table-confirm-code.xml::create-table-confirm-code::Andrey
-2026-02-19T12:19:52.238+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.changelog                      : Table confirm_code created
-2026-02-19T12:19:52.239+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.changelog                      : ChangeSet db/changelog/v.0.3.0/create-table-confirm-code.xml::create-table-confirm-code::Andrey ran successfully in 32ms
-2026-02-19T12:19:52.243+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.ui                             : Running Changeset: db/changelog/v.0.3.0/create-foreign-key-confirm-code-to-user.xml::create-foreign-key-confirm-code-to-user::Andrey
-2026-02-19T12:19:52.251+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.changelog                      : Foreign key constraint added to confirm_code (user_id)
-2026-02-19T12:19:52.252+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.changelog                      : ChangeSet db/changelog/v.0.3.0/create-foreign-key-confirm-code-to-user.xml::create-foreign-key-confirm-code-to-user::Andrey ran successfully in 8ms
-2026-02-19T12:19:52.255+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.ui                             : Running Changeset: db/changelog/v.0.3.0/add-columns-email-and-active-to-user.xml::add-columns-email-and-active-to-user::Andrey
-2026-02-19T12:19:52.261+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.changelog                      : Columns email(varchar(64)) added to user
-2026-02-19T12:19:52.263+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.changelog                      : Columns active(boolean) added to user
-2026-02-19T12:19:52.264+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.changelog                      : ChangeSet db/changelog/v.0.3.0/add-columns-email-and-active-to-user.xml::add-columns-email-and-active-to-user::Andrey ran successfully in 9ms
-2026-02-19T12:19:52.273+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.util                           : UPDATE SUMMARY
-2026-02-19T12:19:52.274+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.util                           : Run:                          4
-2026-02-19T12:19:52.274+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.util                           : Previously run:               8
-2026-02-19T12:19:52.274+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.util                           : Filtered out:                 0
-2026-02-19T12:19:52.274+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.util                           : -------------------------------
-2026-02-19T12:19:52.274+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.util                           : Total change sets:           12
-2026-02-19T12:19:52.275+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.util                           : Update summary generated
-2026-02-19T12:19:52.277+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.command                        : Update command completed successfully.
-2026-02-19T12:19:52.277+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 4
-2026-02-19T12:19:52.280+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.lockservice                    : Successfully released change log lock
-2026-02-19T12:19:52.281+01:00  INFO 9696 --- [g-40-shop] [main] liquibase.command                        : Command execution complete
-2026-02-19T12:19:52.423+01:00  INFO 9696 --- [g-40-shop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-19T12:19:52.498+01:00  INFO 9696 --- [g-40-shop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2026-02-19T12:19:52.568+01:00  INFO 9696 --- [g-40-shop] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-02-19T12:19:52.885+01:00  INFO 9696 --- [g-40-shop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-19T12:19:53.879+01:00  INFO 9696 --- [g-40-shop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-19T12:19:53.881+01:00  INFO 9696 --- [g-40-shop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-19T12:19:54.295+01:00  WARN 9696 --- [g-40-shop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-19T12:19:54.327+01:00  INFO 9696 --- [g-40-shop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
-2026-02-19T12:19:54.887+01:00  INFO 9696 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-02-19T12:19:54.895+01:00  INFO 9696 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Started G40ShopApplication in 6.188 seconds (process running for 7.626)
-2026-02-19T13:47:54.021+01:00  WARN 9696 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m32s77ms295µs600ns).
-2026-02-19T14:37:58.405+01:00  WARN 9696 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m4s149ms120µs).
-2026-02-19T15:34:38.914+01:00  WARN 9696 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m10s434ms561µs800ns).
-2026-02-19T17:28:14.945+01:00  WARN 9696 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h47m35s929ms67µs900ns).
-2026-02-19T17:28:58.993+01:00  INFO 9696 --- [g-40-shop] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-19T17:28:58.994+01:00  INFO 9696 --- [g-40-shop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-19T17:28:59.013+01:00  INFO 9696 --- [g-40-shop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
-2026-02-19T17:29:15.255+01:00  INFO 9696 --- [g-40-shop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-19T17:29:15.265+01:00  INFO 9696 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-02-19T17:29:15.274+01:00  INFO 9696 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-09T10:35:30.559+01:00  INFO 8472 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Starting G40ShopApplication using Java 17.0.5 with PID 8472 (C:\Users\EvgenyJava\g-40-shop\target\classes started by mailf in C:\Users\EvgenyJava\g-40-shop)
+2026-03-09T10:35:30.566+01:00  INFO 8472 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : The following 1 profile is active: "dev"
+2026-03-09T10:35:32.172+01:00  INFO 8472 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-09T10:35:32.402+01:00  INFO 8472 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 207 ms. Found 4 JPA repository interfaces.
+2026-03-09T10:35:34.025+01:00  INFO 8472 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-09T10:35:34.055+01:00  INFO 8472 --- [g-40-shop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-09T10:35:34.056+01:00  INFO 8472 --- [g-40-shop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-03-09T10:35:34.189+01:00  INFO 8472 --- [g-40-shop] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-09T10:35:34.190+01:00  INFO 8472 --- [g-40-shop] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3576 ms
+2026-03-09T10:35:34.430+01:00  INFO 8472 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-09T10:35:34.719+01:00  INFO 8472 --- [g-40-shop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@54a056e4
+2026-03-09T10:35:34.722+01:00  INFO 8472 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-09T10:35:34.933+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.database                       : Set default schema name to public
+2026-03-09T10:35:35.831+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-09T10:35:35.942+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2026-03-09T10:35:35.944+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.command                        : Using deploymentId: 3048935943
+2026-03-09T10:35:35.946+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-09T10:35:35.959+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.ui                             : Running Changeset: db/changelog/v.0.5.0/changelog.xml::add-tag-0.5.0::Andrey
+2026-03-09T10:35:35.964+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : Tag 'v.0.5.0' applied to database
+2026-03-09T10:35:35.965+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : ChangeSet db/changelog/v.0.5.0/changelog.xml::add-tag-0.5.0::Andrey ran successfully in 5ms
+2026-03-09T10:35:35.974+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.ui                             : Running Changeset: db/changelog/v.0.5.0/add-column-quantity-to-product.xml::add-column-quantity-to-product::Eugen
+2026-03-09T10:35:35.989+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : Columns quantity(int) added to product
+2026-03-09T10:35:35.990+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : ChangeSet db/changelog/v.0.5.0/add-column-quantity-to-product.xml::add-column-quantity-to-product::Eugen ran successfully in 16ms
+2026-03-09T10:35:35.996+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.ui                             : Running Changeset: db/changelog/v.0.5.0/add-role-supplier.xml::add-role-supplier::Eugen
+2026-03-09T10:35:36.003+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : New row inserted into role
+2026-03-09T10:35:36.004+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : ChangeSet db/changelog/v.0.5.0/add-role-supplier.xml::add-role-supplier::Eugen ran successfully in 8ms
+2026-03-09T10:35:36.016+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.util                           : UPDATE SUMMARY
+2026-03-09T10:35:36.016+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.util                           : Run:                          3
+2026-03-09T10:35:36.016+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.util                           : Previously run:              14
+2026-03-09T10:35:36.016+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.util                           : Filtered out:                 0
+2026-03-09T10:35:36.022+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.util                           : -------------------------------
+2026-03-09T10:35:36.022+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.util                           : Total change sets:           17
+2026-03-09T10:35:36.025+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.util                           : Update summary generated
+2026-03-09T10:35:36.028+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.command                        : Update command completed successfully.
+2026-03-09T10:35:36.028+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 4
+2026-03-09T10:35:36.032+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.lockservice                    : Successfully released change log lock
+2026-03-09T10:35:36.033+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.command                        : Command execution complete
+2026-03-09T10:35:36.197+01:00  INFO 8472 --- [g-40-shop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-09T10:35:36.304+01:00  INFO 8472 --- [g-40-shop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-09T10:35:36.358+01:00  INFO 8472 --- [g-40-shop] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-09T10:35:36.729+01:00  INFO 8472 --- [g-40-shop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-09T10:35:38.183+01:00  INFO 8472 --- [g-40-shop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-09T10:35:38.188+01:00  INFO 8472 --- [g-40-shop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-09T10:35:39.868+01:00  WARN 8472 --- [g-40-shop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-09T10:35:39.925+01:00  INFO 8472 --- [g-40-shop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2026-03-09T10:35:40.402+01:00  INFO 8472 --- [g-40-shop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4fad5e7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6662af0a, org.springframework.security.web.context.SecurityContextHolderFilter@7e93497d, org.springframework.security.web.header.HeaderWriterFilter@181cafd, org.springframework.web.filter.CorsFilter@665f19d, org.springframework.security.web.authentication.logout.LogoutFilter@a8e649e, de.ait_tr.g_40_shop.security.sec_filter.TokenFilter@33e19be9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c8dc1ef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c7485d2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4928a347, org.springframework.security.web.session.SessionManagementFilter@595713f3, org.springframework.security.web.access.ExceptionTranslationFilter@7ff48cdc, org.springframework.security.web.access.intercept.AuthorizationFilter@224855fe]
+2026-03-09T10:35:40.852+01:00  WARN 8472 --- [g-40-shop] [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location: [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2026-03-09T10:35:40.942+01:00  INFO 8472 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-09T10:35:40.954+01:00  INFO 8472 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Started G40ShopApplication in 10.895 seconds (process running for 18.705)
+2026-03-09T10:36:57.389+01:00  WARN 8472 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s664ms825µs900ns).
