@@ -1,50 +1,584 @@
-2026-03-09T10:35:30.559+01:00  INFO 8472 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Starting G40ShopApplication using Java 17.0.5 with PID 8472 (C:\Users\EvgenyJava\g-40-shop\target\classes started by mailf in C:\Users\EvgenyJava\g-40-shop)
-2026-03-09T10:35:30.566+01:00  INFO 8472 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : The following 1 profile is active: "dev"
-2026-03-09T10:35:32.172+01:00  INFO 8472 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-09T10:35:32.402+01:00  INFO 8472 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 207 ms. Found 4 JPA repository interfaces.
-2026-03-09T10:35:34.025+01:00  INFO 8472 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-03-09T10:35:34.055+01:00  INFO 8472 --- [g-40-shop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-09T10:35:34.056+01:00  INFO 8472 --- [g-40-shop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2026-03-09T10:35:34.189+01:00  INFO 8472 --- [g-40-shop] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-09T10:35:34.190+01:00  INFO 8472 --- [g-40-shop] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3576 ms
-2026-03-09T10:35:34.430+01:00  INFO 8472 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-09T10:35:34.719+01:00  INFO 8472 --- [g-40-shop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@54a056e4
-2026-03-09T10:35:34.722+01:00  INFO 8472 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-09T10:35:34.933+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.database                       : Set default schema name to public
-2026-03-09T10:35:35.831+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
-2026-03-09T10:35:35.942+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.lockservice                    : Successfully acquired change log lock
-2026-03-09T10:35:35.944+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.command                        : Using deploymentId: 3048935943
-2026-03-09T10:35:35.946+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
-2026-03-09T10:35:35.959+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.ui                             : Running Changeset: db/changelog/v.0.5.0/changelog.xml::add-tag-0.5.0::Andrey
-2026-03-09T10:35:35.964+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : Tag 'v.0.5.0' applied to database
-2026-03-09T10:35:35.965+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : ChangeSet db/changelog/v.0.5.0/changelog.xml::add-tag-0.5.0::Andrey ran successfully in 5ms
-2026-03-09T10:35:35.974+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.ui                             : Running Changeset: db/changelog/v.0.5.0/add-column-quantity-to-product.xml::add-column-quantity-to-product::Eugen
-2026-03-09T10:35:35.989+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : Columns quantity(int) added to product
-2026-03-09T10:35:35.990+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : ChangeSet db/changelog/v.0.5.0/add-column-quantity-to-product.xml::add-column-quantity-to-product::Eugen ran successfully in 16ms
-2026-03-09T10:35:35.996+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.ui                             : Running Changeset: db/changelog/v.0.5.0/add-role-supplier.xml::add-role-supplier::Eugen
-2026-03-09T10:35:36.003+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : New row inserted into role
-2026-03-09T10:35:36.004+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.changelog                      : ChangeSet db/changelog/v.0.5.0/add-role-supplier.xml::add-role-supplier::Eugen ran successfully in 8ms
-2026-03-09T10:35:36.016+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.util                           : UPDATE SUMMARY
-2026-03-09T10:35:36.016+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.util                           : Run:                          3
-2026-03-09T10:35:36.016+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.util                           : Previously run:              14
-2026-03-09T10:35:36.016+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.util                           : Filtered out:                 0
-2026-03-09T10:35:36.022+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.util                           : -------------------------------
-2026-03-09T10:35:36.022+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.util                           : Total change sets:           17
-2026-03-09T10:35:36.025+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.util                           : Update summary generated
-2026-03-09T10:35:36.028+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.command                        : Update command completed successfully.
-2026-03-09T10:35:36.028+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 4
-2026-03-09T10:35:36.032+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.lockservice                    : Successfully released change log lock
-2026-03-09T10:35:36.033+01:00  INFO 8472 --- [g-40-shop] [main] liquibase.command                        : Command execution complete
-2026-03-09T10:35:36.197+01:00  INFO 8472 --- [g-40-shop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-09T10:35:36.304+01:00  INFO 8472 --- [g-40-shop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2026-03-09T10:35:36.358+01:00  INFO 8472 --- [g-40-shop] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-03-09T10:35:36.729+01:00  INFO 8472 --- [g-40-shop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-09T10:35:38.183+01:00  INFO 8472 --- [g-40-shop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-09T10:35:38.188+01:00  INFO 8472 --- [g-40-shop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-09T10:35:39.868+01:00  WARN 8472 --- [g-40-shop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-09T10:35:39.925+01:00  INFO 8472 --- [g-40-shop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
-2026-03-09T10:35:40.402+01:00  INFO 8472 --- [g-40-shop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4fad5e7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6662af0a, org.springframework.security.web.context.SecurityContextHolderFilter@7e93497d, org.springframework.security.web.header.HeaderWriterFilter@181cafd, org.springframework.web.filter.CorsFilter@665f19d, org.springframework.security.web.authentication.logout.LogoutFilter@a8e649e, de.ait_tr.g_40_shop.security.sec_filter.TokenFilter@33e19be9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c8dc1ef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c7485d2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4928a347, org.springframework.security.web.session.SessionManagementFilter@595713f3, org.springframework.security.web.access.ExceptionTranslationFilter@7ff48cdc, org.springframework.security.web.access.intercept.AuthorizationFilter@224855fe]
-2026-03-09T10:35:40.852+01:00  WARN 8472 --- [g-40-shop] [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location: [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
-2026-03-09T10:35:40.942+01:00  INFO 8472 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-03-09T10:35:40.954+01:00  INFO 8472 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Started G40ShopApplication in 10.895 seconds (process running for 18.705)
-2026-03-09T10:36:57.389+01:00  WARN 8472 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s664ms825µs900ns).
+2026-03-10T07:21:20.160+01:00  INFO 31828 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Starting G40ShopApplication using Java 17.0.5 with PID 31828 (C:\Users\EvgenyJava\g-40-shop\target\classes started by mailf in C:\Users\EvgenyJava\g-40-shop)
+2026-03-10T07:21:20.170+01:00  INFO 31828 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : The following 1 profile is active: "dev"
+2026-03-10T07:21:21.120+01:00  INFO 31828 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T07:21:21.194+01:00  INFO 31828 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 4 JPA repository interfaces.
+2026-03-10T07:21:21.995+01:00  INFO 31828 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-10T07:21:22.012+01:00  INFO 31828 --- [g-40-shop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T07:21:22.013+01:00  INFO 31828 --- [g-40-shop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-03-10T07:21:22.085+01:00  INFO 31828 --- [g-40-shop] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-10T07:21:22.086+01:00  INFO 31828 --- [g-40-shop] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1867 ms
+2026-03-10T07:21:22.201+01:00  INFO 31828 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T07:21:22.446+01:00  INFO 31828 --- [g-40-shop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@19b9f903
+2026-03-10T07:21:22.449+01:00  INFO 31828 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T07:21:22.624+01:00  INFO 31828 --- [g-40-shop] [main] liquibase.database                       : Set default schema name to public
+2026-03-10T07:21:23.334+01:00  INFO 31828 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T07:21:23.385+01:00  INFO 31828 --- [g-40-shop] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-03-10T07:21:23.388+01:00  INFO 31828 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T07:21:23.397+01:00  INFO 31828 --- [g-40-shop] [main] liquibase.util                           : UPDATE SUMMARY
+2026-03-10T07:21:23.397+01:00  INFO 31828 --- [g-40-shop] [main] liquibase.util                           : Run:                          0
+2026-03-10T07:21:23.397+01:00  INFO 31828 --- [g-40-shop] [main] liquibase.util                           : Previously run:              17
+2026-03-10T07:21:23.397+01:00  INFO 31828 --- [g-40-shop] [main] liquibase.util                           : Filtered out:                 0
+2026-03-10T07:21:23.397+01:00  INFO 31828 --- [g-40-shop] [main] liquibase.util                           : -------------------------------
+2026-03-10T07:21:23.397+01:00  INFO 31828 --- [g-40-shop] [main] liquibase.util                           : Total change sets:           17
+2026-03-10T07:21:23.398+01:00  INFO 31828 --- [g-40-shop] [main] liquibase.util                           : Update summary generated
+2026-03-10T07:21:23.421+01:00  INFO 31828 --- [g-40-shop] [main] liquibase.lockservice                    : Successfully released change log lock
+2026-03-10T07:21:23.422+01:00  INFO 31828 --- [g-40-shop] [main] liquibase.command                        : Command execution complete
+2026-03-10T07:21:23.512+01:00  INFO 31828 --- [g-40-shop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-10T07:21:23.602+01:00  INFO 31828 --- [g-40-shop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-10T07:21:23.668+01:00  INFO 31828 --- [g-40-shop] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-10T07:21:23.976+01:00  INFO 31828 --- [g-40-shop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T07:21:25.284+01:00  INFO 31828 --- [g-40-shop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T07:21:25.287+01:00  INFO 31828 --- [g-40-shop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T07:21:26.392+01:00  WARN 31828 --- [g-40-shop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T07:21:26.427+01:00  INFO 31828 --- [g-40-shop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2026-03-10T07:21:26.807+01:00  INFO 31828 --- [g-40-shop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b7e739, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@60e2b6e3, org.springframework.security.web.context.SecurityContextHolderFilter@7c305624, org.springframework.security.web.header.HeaderWriterFilter@2162b22d, org.springframework.web.filter.CorsFilter@7f6e9e03, org.springframework.security.web.authentication.logout.LogoutFilter@458044df, de.ait_tr.g_40_shop.security.sec_filter.TokenFilter@7e7ee3b7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73534675, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60a98fa6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20f1c8ed, org.springframework.security.web.session.SessionManagementFilter@3a07afe6, org.springframework.security.web.access.ExceptionTranslationFilter@204bd52d, org.springframework.security.web.access.intercept.AuthorizationFilter@70edffdb]
+2026-03-10T07:21:27.110+01:00  WARN 31828 --- [g-40-shop] [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location: [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2026-03-10T07:21:27.220+01:00  INFO 31828 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T07:21:27.232+01:00  INFO 31828 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Started G40ShopApplication in 7.539 seconds (process running for 16.634)
+2026-03-10T07:23:30.165+01:00  INFO 31828 --- [g-40-shop] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T07:23:30.166+01:00  INFO 31828 --- [g-40-shop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T07:23:30.168+01:00  INFO 31828 --- [g-40-shop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-10T07:43:08.650+01:00  INFO 31828 --- [g-40-shop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T07:43:08.654+01:00  INFO 31828 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T07:43:08.664+01:00  INFO 31828 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T07:43:38.294+01:00  INFO 32980 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Starting G40ShopApplication using Java 17.0.5 with PID 32980 (C:\Users\EvgenyJava\g-40-shop\target\classes started by mailf in C:\Users\EvgenyJava\g-40-shop)
+2026-03-10T07:43:38.297+01:00  INFO 32980 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : The following 1 profile is active: "dev"
+2026-03-10T07:43:39.226+01:00  INFO 32980 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T07:43:39.294+01:00  INFO 32980 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 4 JPA repository interfaces.
+2026-03-10T07:43:39.975+01:00  INFO 32980 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-10T07:43:39.985+01:00  INFO 32980 --- [g-40-shop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T07:43:39.986+01:00  INFO 32980 --- [g-40-shop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-03-10T07:43:40.054+01:00  INFO 32980 --- [g-40-shop] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-10T07:43:40.054+01:00  INFO 32980 --- [g-40-shop] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1709 ms
+2026-03-10T07:43:40.191+01:00  INFO 32980 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T07:43:40.506+01:00  INFO 32980 --- [g-40-shop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@58164e9a
+2026-03-10T07:43:40.508+01:00  INFO 32980 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T07:43:40.649+01:00  INFO 32980 --- [g-40-shop] [main] liquibase.database                       : Set default schema name to public
+2026-03-10T07:43:41.400+01:00  INFO 32980 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T07:43:41.460+01:00  INFO 32980 --- [g-40-shop] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-03-10T07:43:41.463+01:00  INFO 32980 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T07:43:41.473+01:00  INFO 32980 --- [g-40-shop] [main] liquibase.util                           : UPDATE SUMMARY
+2026-03-10T07:43:41.474+01:00  INFO 32980 --- [g-40-shop] [main] liquibase.util                           : Run:                          0
+2026-03-10T07:43:41.474+01:00  INFO 32980 --- [g-40-shop] [main] liquibase.util                           : Previously run:              17
+2026-03-10T07:43:41.474+01:00  INFO 32980 --- [g-40-shop] [main] liquibase.util                           : Filtered out:                 0
+2026-03-10T07:43:41.474+01:00  INFO 32980 --- [g-40-shop] [main] liquibase.util                           : -------------------------------
+2026-03-10T07:43:41.474+01:00  INFO 32980 --- [g-40-shop] [main] liquibase.util                           : Total change sets:           17
+2026-03-10T07:43:41.475+01:00  INFO 32980 --- [g-40-shop] [main] liquibase.util                           : Update summary generated
+2026-03-10T07:43:41.493+01:00  INFO 32980 --- [g-40-shop] [main] liquibase.lockservice                    : Successfully released change log lock
+2026-03-10T07:43:41.495+01:00  INFO 32980 --- [g-40-shop] [main] liquibase.command                        : Command execution complete
+2026-03-10T07:43:41.609+01:00  INFO 32980 --- [g-40-shop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-10T07:43:41.685+01:00  INFO 32980 --- [g-40-shop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-10T07:43:41.728+01:00  INFO 32980 --- [g-40-shop] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-10T07:43:42.014+01:00  INFO 32980 --- [g-40-shop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T07:43:43.006+01:00  INFO 32980 --- [g-40-shop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T07:43:43.009+01:00  INFO 32980 --- [g-40-shop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T07:43:44.274+01:00  WARN 32980 --- [g-40-shop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T07:43:44.324+01:00  INFO 32980 --- [g-40-shop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2026-03-10T07:43:44.684+01:00  INFO 32980 --- [g-40-shop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6a4ec62d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14d294f4, org.springframework.security.web.context.SecurityContextHolderFilter@5cfcb55c, org.springframework.security.web.header.HeaderWriterFilter@780ccdc9, org.springframework.web.filter.CorsFilter@4c902a72, org.springframework.security.web.authentication.logout.LogoutFilter@7a65e842, de.ait_tr.g_40_shop.security.sec_filter.TokenFilter@2be9add0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2dca3c72, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2411cf8b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78571a17, org.springframework.security.web.session.SessionManagementFilter@65ff1e6d, org.springframework.security.web.access.ExceptionTranslationFilter@337f6716, org.springframework.security.web.access.intercept.AuthorizationFilter@72bf63a]
+2026-03-10T07:43:45.049+01:00  WARN 32980 --- [g-40-shop] [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location: [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2026-03-10T07:43:45.132+01:00  INFO 32980 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T07:43:45.142+01:00  INFO 32980 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Started G40ShopApplication in 7.354 seconds (process running for 8.127)
+2026-03-10T07:44:30.146+01:00  INFO 32980 --- [g-40-shop] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T07:44:30.146+01:00  INFO 32980 --- [g-40-shop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T07:44:30.148+01:00  INFO 32980 --- [g-40-shop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-10T07:59:47.463+01:00 ERROR 32980 --- [g-40-shop] [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: io.jsonwebtoken.ExpiredJwtException: JWT expired 38332949459 milliseconds ago at 2024-12-21T14:57:18.000Z. Current time: 2026-03-10T06:59:47.459Z. Allowed clock skew: 0 milliseconds.] with root cause
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired 38332949459 milliseconds ago at 2024-12-21T14:57:18.000Z. Current time: 2026-03-10T06:59:47.459Z. Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:682) ~[jjwt-impl-0.12.5.jar:0.12.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:362) ~[jjwt-impl-0.12.5.jar:0.12.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94) ~[jjwt-impl-0.12.5.jar:0.12.5]
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36) ~[jjwt-impl-0.12.5.jar:0.12.5]
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29) ~[jjwt-impl-0.12.5.jar:0.12.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:821) ~[jjwt-impl-0.12.5.jar:0.12.5]
+	at de.ait_tr.g_40_shop.security.sec_service.TokenService.getClaims(TokenService.java:98) ~[classes/:na]
+	at de.ait_tr.g_40_shop.security.sec_service.TokenService.getRefreshClaims(TokenService.java:91) ~[classes/:na]
+	at de.ait_tr.g_40_shop.security.sec_service.AuthService.getNewAccessToken(AuthService.java:44) ~[classes/:na]
+	at de.ait_tr.g_40_shop.security.sec_controller.AuthController.getNewAccessToken(AuthController.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at de.ait_tr.g_40_shop.security.sec_filter.TokenFilter.doFilter(TokenFilter.java:37) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at de.ait_tr.g_40_shop.security.sec_filter.TokenFilter.doFilter(TokenFilter.java:37) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2026-03-10T08:03:57.710+01:00  INFO 32980 --- [g-40-shop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T08:03:57.712+01:00  INFO 32980 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T08:03:57.718+01:00  INFO 32980 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T08:06:06.832+01:00  INFO 4044 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Starting G40ShopApplication using Java 17.0.5 with PID 4044 (C:\Users\EvgenyJava\g-40-shop\target\classes started by mailf in C:\Users\EvgenyJava\g-40-shop)
+2026-03-10T08:06:06.834+01:00  INFO 4044 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : The following 1 profile is active: "dev"
+2026-03-10T08:06:07.644+01:00  INFO 4044 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T08:06:07.700+01:00  INFO 4044 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
+2026-03-10T08:06:08.233+01:00  INFO 4044 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-10T08:06:08.243+01:00  INFO 4044 --- [g-40-shop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T08:06:08.243+01:00  INFO 4044 --- [g-40-shop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-03-10T08:06:08.299+01:00  INFO 4044 --- [g-40-shop] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-10T08:06:08.300+01:00  INFO 4044 --- [g-40-shop] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1419 ms
+2026-03-10T08:06:08.397+01:00  INFO 4044 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T08:06:08.561+01:00  INFO 4044 --- [g-40-shop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ebd6fd6
+2026-03-10T08:06:08.563+01:00  INFO 4044 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T08:06:08.680+01:00  INFO 4044 --- [g-40-shop] [main] liquibase.database                       : Set default schema name to public
+2026-03-10T08:06:09.397+01:00  INFO 4044 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T08:06:09.455+01:00  INFO 4044 --- [g-40-shop] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-03-10T08:06:09.457+01:00  INFO 4044 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T08:06:09.470+01:00  INFO 4044 --- [g-40-shop] [main] liquibase.util                           : UPDATE SUMMARY
+2026-03-10T08:06:09.470+01:00  INFO 4044 --- [g-40-shop] [main] liquibase.util                           : Run:                          0
+2026-03-10T08:06:09.471+01:00  INFO 4044 --- [g-40-shop] [main] liquibase.util                           : Previously run:              17
+2026-03-10T08:06:09.471+01:00  INFO 4044 --- [g-40-shop] [main] liquibase.util                           : Filtered out:                 0
+2026-03-10T08:06:09.471+01:00  INFO 4044 --- [g-40-shop] [main] liquibase.util                           : -------------------------------
+2026-03-10T08:06:09.471+01:00  INFO 4044 --- [g-40-shop] [main] liquibase.util                           : Total change sets:           17
+2026-03-10T08:06:09.472+01:00  INFO 4044 --- [g-40-shop] [main] liquibase.util                           : Update summary generated
+2026-03-10T08:06:09.495+01:00  INFO 4044 --- [g-40-shop] [main] liquibase.lockservice                    : Successfully released change log lock
+2026-03-10T08:06:09.498+01:00  INFO 4044 --- [g-40-shop] [main] liquibase.command                        : Command execution complete
+2026-03-10T08:06:09.595+01:00  INFO 4044 --- [g-40-shop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-10T08:06:09.662+01:00  INFO 4044 --- [g-40-shop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-10T08:06:09.705+01:00  INFO 4044 --- [g-40-shop] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-10T08:06:09.974+01:00  INFO 4044 --- [g-40-shop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T08:06:10.918+01:00  INFO 4044 --- [g-40-shop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T08:06:10.922+01:00  INFO 4044 --- [g-40-shop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T08:06:12.027+01:00  WARN 4044 --- [g-40-shop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T08:06:12.049+01:00  INFO 4044 --- [g-40-shop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2026-03-10T08:06:12.379+01:00  INFO 4044 --- [g-40-shop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3a07afe6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@428943a4, org.springframework.security.web.context.SecurityContextHolderFilter@54c3bae, org.springframework.security.web.header.HeaderWriterFilter@6415112c, org.springframework.web.filter.CorsFilter@6ca95b1e, org.springframework.security.web.authentication.logout.LogoutFilter@204bd52d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@68a0a4ae, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a2d0cff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c305624, org.springframework.security.web.session.SessionManagementFilter@7473cf13, org.springframework.security.web.access.ExceptionTranslationFilter@7bec83d5, org.springframework.security.web.access.intercept.AuthorizationFilter@43bda665]
+2026-03-10T08:06:12.717+01:00  WARN 4044 --- [g-40-shop] [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location: [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2026-03-10T08:06:12.805+01:00  INFO 4044 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T08:06:12.816+01:00  INFO 4044 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Started G40ShopApplication in 6.418 seconds (process running for 6.998)
+2026-03-10T08:06:26.912+01:00  INFO 4044 --- [g-40-shop] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T08:06:26.913+01:00  INFO 4044 --- [g-40-shop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T08:06:26.916+01:00  INFO 4044 --- [g-40-shop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-03-10T08:06:27.276+01:00 ERROR 4044 --- [g-40-shop] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: io.jsonwebtoken.ExpiredJwtException: JWT expired 38333349266 milliseconds ago at 2024-12-21T14:57:18.000Z. Current time: 2026-03-10T07:06:27.266Z. Allowed clock skew: 0 milliseconds.] with root cause
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired 38333349266 milliseconds ago at 2024-12-21T14:57:18.000Z. Current time: 2026-03-10T07:06:27.266Z. Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:682) ~[jjwt-impl-0.12.5.jar:0.12.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:362) ~[jjwt-impl-0.12.5.jar:0.12.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94) ~[jjwt-impl-0.12.5.jar:0.12.5]
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36) ~[jjwt-impl-0.12.5.jar:0.12.5]
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29) ~[jjwt-impl-0.12.5.jar:0.12.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:821) ~[jjwt-impl-0.12.5.jar:0.12.5]
+	at de.ait_tr.g_40_shop.security.sec_service.TokenService.getClaims(TokenService.java:98) ~[classes/:na]
+	at de.ait_tr.g_40_shop.security.sec_service.TokenService.getRefreshClaims(TokenService.java:91) ~[classes/:na]
+	at de.ait_tr.g_40_shop.security.sec_service.AuthService.getNewAccessToken(AuthService.java:44) ~[classes/:na]
+	at de.ait_tr.g_40_shop.security.sec_controller.AuthController.getNewAccessToken(AuthController.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at de.ait_tr.g_40_shop.security.sec_filter.TokenFilter.doFilter(TokenFilter.java:37) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.3.0.jar:6.3.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2026-03-10T09:35:40.220+01:00  WARN 4044 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h20m1s375ms267µs800ns).
+2026-03-10T10:47:00.423+01:00  WARN 4044 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m47s114ms6µs200ns).
+2026-03-10T11:01:38.195+01:00  WARN 4044 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m37s773ms756µs500ns).
+2026-03-10T11:11:45.712+01:00  WARN 4044 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m37s477ms694µs400ns).
+2026-03-10T11:25:38.141+01:00  WARN 4044 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m52s429ms381µs200ns).
+2026-03-10T11:42:49.937+01:00  INFO 4044 --- [g-40-shop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T11:42:49.957+01:00  INFO 4044 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T11:42:49.974+01:00  INFO 4044 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T11:42:58.634+01:00  INFO 21708 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Starting G40ShopApplication using Java 17.0.5 with PID 21708 (C:\Users\EvgenyJava\g-40-shop\target\classes started by mailf in C:\Users\EvgenyJava\g-40-shop)
+2026-03-10T11:42:58.638+01:00  INFO 21708 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : The following 1 profile is active: "dev"
+2026-03-10T11:42:59.572+01:00  INFO 21708 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T11:42:59.645+01:00  INFO 21708 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 4 JPA repository interfaces.
+2026-03-10T11:43:00.404+01:00  INFO 21708 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-10T11:43:00.421+01:00  INFO 21708 --- [g-40-shop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T11:43:00.422+01:00  INFO 21708 --- [g-40-shop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-03-10T11:43:00.542+01:00  INFO 21708 --- [g-40-shop] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-10T11:43:00.543+01:00  INFO 21708 --- [g-40-shop] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1853 ms
+2026-03-10T11:43:00.732+01:00  INFO 21708 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T11:43:00.982+01:00  INFO 21708 --- [g-40-shop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@610fbe1c
+2026-03-10T11:43:00.984+01:00  INFO 21708 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T11:43:01.151+01:00  INFO 21708 --- [g-40-shop] [main] liquibase.database                       : Set default schema name to public
+2026-03-10T11:43:01.887+01:00  INFO 21708 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T11:43:01.954+01:00  INFO 21708 --- [g-40-shop] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-03-10T11:43:01.956+01:00  INFO 21708 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T11:43:01.966+01:00  INFO 21708 --- [g-40-shop] [main] liquibase.util                           : UPDATE SUMMARY
+2026-03-10T11:43:01.967+01:00  INFO 21708 --- [g-40-shop] [main] liquibase.util                           : Run:                          0
+2026-03-10T11:43:01.967+01:00  INFO 21708 --- [g-40-shop] [main] liquibase.util                           : Previously run:              17
+2026-03-10T11:43:01.967+01:00  INFO 21708 --- [g-40-shop] [main] liquibase.util                           : Filtered out:                 0
+2026-03-10T11:43:01.967+01:00  INFO 21708 --- [g-40-shop] [main] liquibase.util                           : -------------------------------
+2026-03-10T11:43:01.967+01:00  INFO 21708 --- [g-40-shop] [main] liquibase.util                           : Total change sets:           17
+2026-03-10T11:43:01.968+01:00  INFO 21708 --- [g-40-shop] [main] liquibase.util                           : Update summary generated
+2026-03-10T11:43:01.993+01:00  INFO 21708 --- [g-40-shop] [main] liquibase.lockservice                    : Successfully released change log lock
+2026-03-10T11:43:01.995+01:00  INFO 21708 --- [g-40-shop] [main] liquibase.command                        : Command execution complete
+2026-03-10T11:43:02.089+01:00  INFO 21708 --- [g-40-shop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-10T11:43:02.194+01:00  INFO 21708 --- [g-40-shop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-10T11:43:02.239+01:00  INFO 21708 --- [g-40-shop] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-10T11:43:02.549+01:00  INFO 21708 --- [g-40-shop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T11:43:03.547+01:00  INFO 21708 --- [g-40-shop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T11:43:03.549+01:00  INFO 21708 --- [g-40-shop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T11:43:04.599+01:00  WARN 21708 --- [g-40-shop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T11:43:04.623+01:00  INFO 21708 --- [g-40-shop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2026-03-10T11:43:04.903+01:00  INFO 21708 --- [g-40-shop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@644a12be, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e34570, org.springframework.security.web.context.SecurityContextHolderFilter@586f1bef, org.springframework.security.web.header.HeaderWriterFilter@2763500e, org.springframework.web.filter.CorsFilter@274010fe, org.springframework.security.web.authentication.logout.LogoutFilter@1c7aa676, de.ait_tr.g_40_shop.security.sec_filter.TokenFilter@76ac3ad0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7bec83d5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2dca3c72, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@975f349, org.springframework.security.web.session.SessionManagementFilter@1942a960, org.springframework.security.web.access.ExceptionTranslationFilter@623dac3, org.springframework.security.web.access.intercept.AuthorizationFilter@13b666b4]
+2026-03-10T11:43:05.194+01:00  WARN 21708 --- [g-40-shop] [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location: [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2026-03-10T11:43:05.269+01:00  INFO 21708 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T11:43:05.279+01:00  INFO 21708 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Started G40ShopApplication in 7.282 seconds (process running for 8.056)
+2026-03-10T11:43:23.348+01:00  INFO 21708 --- [g-40-shop] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T11:43:23.349+01:00  INFO 21708 --- [g-40-shop] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T11:43:23.352+01:00  INFO 21708 --- [g-40-shop] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-03-10T11:52:27.889+01:00  INFO 21708 --- [g-40-shop] [http-nio-8080-exec-5] d.a.g_40_shop.logging.AspectLogging      : Method getAllActiveProducts of the class ProductServiceImpl called
+2026-03-10T11:52:28.086+01:00  INFO 21708 --- [g-40-shop] [http-nio-8080-exec-5] d.a.g_40_shop.logging.AspectLogging      : Method getAllActiveProducts of the class ProductServiceImpl finished its work with result: [Product DTO: id - 1, title - Banana, price - 130.00, Product DTO: id - 2, title - Orange, price - 210.00, Product DTO: id - 7, title - Coconut, price - 130.00, Product DTO: id - 21, title - cherry, price - 130.00]
+2026-03-10T12:09:38.880+01:00  INFO 21708 --- [g-40-shop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T12:09:38.883+01:00  INFO 21708 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T12:09:38.889+01:00  INFO 21708 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T12:09:43.955+01:00  INFO 12348 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Starting G40ShopApplication using Java 17.0.5 with PID 12348 (C:\Users\EvgenyJava\g-40-shop\target\classes started by mailf in C:\Users\EvgenyJava\g-40-shop)
+2026-03-10T12:09:43.958+01:00  INFO 12348 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : The following 1 profile is active: "dev"
+2026-03-10T12:09:44.684+01:00  INFO 12348 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T12:09:44.749+01:00  INFO 12348 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
+2026-03-10T12:09:45.324+01:00  INFO 12348 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-10T12:09:45.333+01:00  INFO 12348 --- [g-40-shop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T12:09:45.334+01:00  INFO 12348 --- [g-40-shop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-03-10T12:09:45.386+01:00  INFO 12348 --- [g-40-shop] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-10T12:09:45.387+01:00  INFO 12348 --- [g-40-shop] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1391 ms
+2026-03-10T12:09:45.482+01:00  INFO 12348 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T12:09:45.640+01:00  INFO 12348 --- [g-40-shop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@675ec28b
+2026-03-10T12:09:45.641+01:00  INFO 12348 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T12:09:45.756+01:00  INFO 12348 --- [g-40-shop] [main] liquibase.database                       : Set default schema name to public
+2026-03-10T12:09:46.374+01:00  INFO 12348 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T12:09:46.421+01:00  INFO 12348 --- [g-40-shop] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-03-10T12:09:46.423+01:00  INFO 12348 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T12:09:46.431+01:00  INFO 12348 --- [g-40-shop] [main] liquibase.util                           : UPDATE SUMMARY
+2026-03-10T12:09:46.431+01:00  INFO 12348 --- [g-40-shop] [main] liquibase.util                           : Run:                          0
+2026-03-10T12:09:46.431+01:00  INFO 12348 --- [g-40-shop] [main] liquibase.util                           : Previously run:              17
+2026-03-10T12:09:46.431+01:00  INFO 12348 --- [g-40-shop] [main] liquibase.util                           : Filtered out:                 0
+2026-03-10T12:09:46.431+01:00  INFO 12348 --- [g-40-shop] [main] liquibase.util                           : -------------------------------
+2026-03-10T12:09:46.431+01:00  INFO 12348 --- [g-40-shop] [main] liquibase.util                           : Total change sets:           17
+2026-03-10T12:09:46.432+01:00  INFO 12348 --- [g-40-shop] [main] liquibase.util                           : Update summary generated
+2026-03-10T12:09:46.449+01:00  INFO 12348 --- [g-40-shop] [main] liquibase.lockservice                    : Successfully released change log lock
+2026-03-10T12:09:46.451+01:00  INFO 12348 --- [g-40-shop] [main] liquibase.command                        : Command execution complete
+2026-03-10T12:09:46.550+01:00  INFO 12348 --- [g-40-shop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-10T12:09:46.618+01:00  INFO 12348 --- [g-40-shop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-10T12:09:46.655+01:00  INFO 12348 --- [g-40-shop] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-10T12:09:46.906+01:00  INFO 12348 --- [g-40-shop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T12:09:47.881+01:00  INFO 12348 --- [g-40-shop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T12:09:47.885+01:00  INFO 12348 --- [g-40-shop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T12:09:48.943+01:00  WARN 12348 --- [g-40-shop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T12:09:48.975+01:00  INFO 12348 --- [g-40-shop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2026-03-10T12:09:49.256+01:00  INFO 12348 --- [g-40-shop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@40eb85e9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f58ac11, org.springframework.security.web.context.SecurityContextHolderFilter@42d039ef, org.springframework.security.web.header.HeaderWriterFilter@5621119d, org.springframework.web.filter.CorsFilter@55e073c8, org.springframework.security.web.authentication.logout.LogoutFilter@7473cf13, de.ait_tr.g_40_shop.security.sec_filter.TokenFilter@37ecc472, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@190a5f74, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c7b040f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1768c77f, org.springframework.security.web.session.SessionManagementFilter@7b900883, org.springframework.security.web.access.ExceptionTranslationFilter@2b5854a7, org.springframework.security.web.access.intercept.AuthorizationFilter@2c84d6c4]
+2026-03-10T12:09:49.542+01:00  WARN 12348 --- [g-40-shop] [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location: [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2026-03-10T12:09:49.619+01:00  INFO 12348 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T12:09:49.628+01:00  INFO 12348 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Started G40ShopApplication in 6.097 seconds (process running for 6.668)
+2026-03-10T12:10:03.973+01:00  INFO 12348 --- [g-40-shop] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T12:10:03.974+01:00  INFO 12348 --- [g-40-shop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T12:10:03.975+01:00  INFO 12348 --- [g-40-shop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-10T12:10:04.101+01:00  INFO 12348 --- [g-40-shop] [http-nio-8080-exec-2] d.a.g_40_shop.logging.AspectLogging      : Method getById of the class ProductServiceImpl successfully returned result: Product DTO: id - 1, title - Banana, price - 130.00
+2026-03-10T12:12:33.801+01:00  INFO 12348 --- [g-40-shop] [http-nio-8080-exec-5] d.a.g_40_shop.logging.AspectLogging      : Method getById of the class ProductServiceImpl successfully returned result: Product DTO: id - 1, title - Banana, price - 130.00
+2026-03-10T12:17:26.151+01:00  INFO 12348 --- [g-40-shop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T12:17:26.155+01:00  INFO 12348 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T12:17:26.165+01:00  INFO 12348 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T12:18:27.793+01:00  INFO 28736 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Starting G40ShopApplication using Java 17.0.5 with PID 28736 (C:\Users\EvgenyJava\g-40-shop\target\classes started by mailf in C:\Users\EvgenyJava\g-40-shop)
+2026-03-10T12:18:27.796+01:00  INFO 28736 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : The following 1 profile is active: "dev"
+2026-03-10T12:18:28.487+01:00  INFO 28736 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T12:18:28.544+01:00  INFO 28736 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
+2026-03-10T12:18:29.066+01:00  INFO 28736 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-10T12:18:29.074+01:00  INFO 28736 --- [g-40-shop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T12:18:29.074+01:00  INFO 28736 --- [g-40-shop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-03-10T12:18:29.124+01:00  INFO 28736 --- [g-40-shop] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-10T12:18:29.124+01:00  INFO 28736 --- [g-40-shop] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1292 ms
+2026-03-10T12:18:29.212+01:00  INFO 28736 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T12:18:29.375+01:00  INFO 28736 --- [g-40-shop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@184afb78
+2026-03-10T12:18:29.376+01:00  INFO 28736 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T12:18:29.480+01:00  INFO 28736 --- [g-40-shop] [main] liquibase.database                       : Set default schema name to public
+2026-03-10T12:18:30.007+01:00  INFO 28736 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T12:18:30.052+01:00  INFO 28736 --- [g-40-shop] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-03-10T12:18:30.053+01:00  INFO 28736 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T12:18:30.061+01:00  INFO 28736 --- [g-40-shop] [main] liquibase.util                           : UPDATE SUMMARY
+2026-03-10T12:18:30.062+01:00  INFO 28736 --- [g-40-shop] [main] liquibase.util                           : Run:                          0
+2026-03-10T12:18:30.062+01:00  INFO 28736 --- [g-40-shop] [main] liquibase.util                           : Previously run:              17
+2026-03-10T12:18:30.062+01:00  INFO 28736 --- [g-40-shop] [main] liquibase.util                           : Filtered out:                 0
+2026-03-10T12:18:30.062+01:00  INFO 28736 --- [g-40-shop] [main] liquibase.util                           : -------------------------------
+2026-03-10T12:18:30.062+01:00  INFO 28736 --- [g-40-shop] [main] liquibase.util                           : Total change sets:           17
+2026-03-10T12:18:30.063+01:00  INFO 28736 --- [g-40-shop] [main] liquibase.util                           : Update summary generated
+2026-03-10T12:18:30.083+01:00  INFO 28736 --- [g-40-shop] [main] liquibase.lockservice                    : Successfully released change log lock
+2026-03-10T12:18:30.084+01:00  INFO 28736 --- [g-40-shop] [main] liquibase.command                        : Command execution complete
+2026-03-10T12:18:30.171+01:00  INFO 28736 --- [g-40-shop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-10T12:18:30.217+01:00  INFO 28736 --- [g-40-shop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-10T12:18:30.256+01:00  INFO 28736 --- [g-40-shop] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-10T12:18:30.492+01:00  INFO 28736 --- [g-40-shop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T12:18:31.296+01:00  INFO 28736 --- [g-40-shop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T12:18:31.298+01:00  INFO 28736 --- [g-40-shop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T12:18:32.171+01:00  WARN 28736 --- [g-40-shop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T12:18:32.200+01:00  INFO 28736 --- [g-40-shop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2026-03-10T12:18:32.470+01:00  INFO 28736 --- [g-40-shop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@64c189d8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@294ffc88, org.springframework.security.web.context.SecurityContextHolderFilter@494f74cd, org.springframework.security.web.header.HeaderWriterFilter@5bee88e3, org.springframework.web.filter.CorsFilter@6988dc14, org.springframework.security.web.authentication.logout.LogoutFilter@793af433, de.ait_tr.g_40_shop.security.sec_filter.TokenFilter@20305c45, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fddd42b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2692910f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b5a659f, org.springframework.security.web.session.SessionManagementFilter@2dca3c72, org.springframework.security.web.access.ExceptionTranslationFilter@73e4ecb, org.springframework.security.web.access.intercept.AuthorizationFilter@78571a17]
+2026-03-10T12:18:32.729+01:00  WARN 28736 --- [g-40-shop] [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location: [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2026-03-10T12:18:32.815+01:00  INFO 28736 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T12:18:32.823+01:00  INFO 28736 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Started G40ShopApplication in 5.462 seconds (process running for 6.101)
+2026-03-10T12:19:00.149+01:00  INFO 28736 --- [g-40-shop] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T12:19:00.149+01:00  INFO 28736 --- [g-40-shop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T12:19:00.151+01:00  INFO 28736 --- [g-40-shop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-10T12:51:04.582+01:00  INFO 28736 --- [g-40-shop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T12:51:04.586+01:00  INFO 28736 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T12:51:04.595+01:00  INFO 28736 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T12:56:23.815+01:00  INFO 11540 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Starting G40ShopApplication using Java 17.0.5 with PID 11540 (C:\Users\EvgenyJava\g-40-shop\target\classes started by mailf in C:\Users\EvgenyJava\g-40-shop)
+2026-03-10T12:56:23.817+01:00  INFO 11540 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : The following 1 profile is active: "dev"
+2026-03-10T12:56:24.513+01:00  INFO 11540 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T12:56:24.571+01:00  INFO 11540 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 4 JPA repository interfaces.
+2026-03-10T12:56:25.195+01:00  INFO 11540 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-10T12:56:25.207+01:00  INFO 11540 --- [g-40-shop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T12:56:25.208+01:00  INFO 11540 --- [g-40-shop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-03-10T12:56:25.267+01:00  INFO 11540 --- [g-40-shop] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-10T12:56:25.267+01:00  INFO 11540 --- [g-40-shop] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1412 ms
+2026-03-10T12:56:25.372+01:00  INFO 11540 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T12:56:25.530+01:00  INFO 11540 --- [g-40-shop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@163e8949
+2026-03-10T12:56:25.531+01:00  INFO 11540 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T12:56:25.657+01:00  INFO 11540 --- [g-40-shop] [main] liquibase.database                       : Set default schema name to public
+2026-03-10T12:56:26.272+01:00  INFO 11540 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T12:56:26.319+01:00  INFO 11540 --- [g-40-shop] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-03-10T12:56:26.322+01:00  INFO 11540 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T12:56:26.329+01:00  INFO 11540 --- [g-40-shop] [main] liquibase.util                           : UPDATE SUMMARY
+2026-03-10T12:56:26.329+01:00  INFO 11540 --- [g-40-shop] [main] liquibase.util                           : Run:                          0
+2026-03-10T12:56:26.329+01:00  INFO 11540 --- [g-40-shop] [main] liquibase.util                           : Previously run:              17
+2026-03-10T12:56:26.329+01:00  INFO 11540 --- [g-40-shop] [main] liquibase.util                           : Filtered out:                 0
+2026-03-10T12:56:26.329+01:00  INFO 11540 --- [g-40-shop] [main] liquibase.util                           : -------------------------------
+2026-03-10T12:56:26.330+01:00  INFO 11540 --- [g-40-shop] [main] liquibase.util                           : Total change sets:           17
+2026-03-10T12:56:26.330+01:00  INFO 11540 --- [g-40-shop] [main] liquibase.util                           : Update summary generated
+2026-03-10T12:56:26.346+01:00  INFO 11540 --- [g-40-shop] [main] liquibase.lockservice                    : Successfully released change log lock
+2026-03-10T12:56:26.347+01:00  INFO 11540 --- [g-40-shop] [main] liquibase.command                        : Command execution complete
+2026-03-10T12:56:26.432+01:00  INFO 11540 --- [g-40-shop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-10T12:56:26.510+01:00  INFO 11540 --- [g-40-shop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-10T12:56:26.551+01:00  INFO 11540 --- [g-40-shop] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-10T12:56:26.838+01:00  INFO 11540 --- [g-40-shop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T12:56:27.817+01:00  INFO 11540 --- [g-40-shop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T12:56:27.819+01:00  INFO 11540 --- [g-40-shop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T12:56:28.820+01:00  WARN 11540 --- [g-40-shop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T12:56:28.851+01:00  INFO 11540 --- [g-40-shop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2026-03-10T12:56:29.140+01:00  INFO 11540 --- [g-40-shop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@312eb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a65e842, org.springframework.security.web.context.SecurityContextHolderFilter@780ccdc9, org.springframework.security.web.header.HeaderWriterFilter@397ff526, org.springframework.web.filter.CorsFilter@58965e17, org.springframework.security.web.authentication.logout.LogoutFilter@55e073c8, de.ait_tr.g_40_shop.security.sec_filter.TokenFilter@755c29b0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65c2610f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4485ca30, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e4874ae, org.springframework.security.web.session.SessionManagementFilter@57404a8d, org.springframework.security.web.access.ExceptionTranslationFilter@37dcda42, org.springframework.security.web.access.intercept.AuthorizationFilter@15d6f0e1]
+2026-03-10T12:56:29.434+01:00  WARN 11540 --- [g-40-shop] [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location: [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2026-03-10T12:56:29.508+01:00  INFO 11540 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T12:56:29.517+01:00  INFO 11540 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Started G40ShopApplication in 6.128 seconds (process running for 6.71)
+2026-03-10T13:00:57.878+01:00  INFO 11540 --- [g-40-shop] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T13:00:57.879+01:00  INFO 11540 --- [g-40-shop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T13:00:57.880+01:00  INFO 11540 --- [g-40-shop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-10T13:21:40.364+01:00  INFO 11540 --- [g-40-shop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T13:21:40.368+01:00  INFO 11540 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T13:21:40.379+01:00  INFO 11540 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-10T13:24:36.863+01:00  INFO 25852 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Starting G40ShopApplication using Java 17.0.5 with PID 25852 (C:\Users\EvgenyJava\g-40-shop\target\classes started by mailf in C:\Users\EvgenyJava\g-40-shop)
+2026-03-10T13:24:36.865+01:00  INFO 25852 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : The following 1 profile is active: "dev"
+2026-03-10T13:24:37.622+01:00  INFO 25852 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T13:24:37.688+01:00  INFO 25852 --- [g-40-shop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
+2026-03-10T13:24:38.319+01:00  INFO 25852 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-10T13:24:38.332+01:00  INFO 25852 --- [g-40-shop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T13:24:38.332+01:00  INFO 25852 --- [g-40-shop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-03-10T13:24:38.399+01:00  INFO 25852 --- [g-40-shop] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-10T13:24:38.400+01:00  INFO 25852 --- [g-40-shop] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1500 ms
+2026-03-10T13:24:38.525+01:00  INFO 25852 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T13:24:38.695+01:00  INFO 25852 --- [g-40-shop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@615e83ac
+2026-03-10T13:24:38.697+01:00  INFO 25852 --- [g-40-shop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T13:24:38.825+01:00  INFO 25852 --- [g-40-shop] [main] liquibase.database                       : Set default schema name to public
+2026-03-10T13:24:39.473+01:00  INFO 25852 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T13:24:39.520+01:00  INFO 25852 --- [g-40-shop] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-03-10T13:24:39.523+01:00  INFO 25852 --- [g-40-shop] [main] liquibase.changelog                      : Reading from public.databasechangelog
+2026-03-10T13:24:39.532+01:00  INFO 25852 --- [g-40-shop] [main] liquibase.util                           : UPDATE SUMMARY
+2026-03-10T13:24:39.532+01:00  INFO 25852 --- [g-40-shop] [main] liquibase.util                           : Run:                          0
+2026-03-10T13:24:39.532+01:00  INFO 25852 --- [g-40-shop] [main] liquibase.util                           : Previously run:              17
+2026-03-10T13:24:39.532+01:00  INFO 25852 --- [g-40-shop] [main] liquibase.util                           : Filtered out:                 0
+2026-03-10T13:24:39.533+01:00  INFO 25852 --- [g-40-shop] [main] liquibase.util                           : -------------------------------
+2026-03-10T13:24:39.533+01:00  INFO 25852 --- [g-40-shop] [main] liquibase.util                           : Total change sets:           17
+2026-03-10T13:24:39.534+01:00  INFO 25852 --- [g-40-shop] [main] liquibase.util                           : Update summary generated
+2026-03-10T13:24:39.552+01:00  INFO 25852 --- [g-40-shop] [main] liquibase.lockservice                    : Successfully released change log lock
+2026-03-10T13:24:39.554+01:00  INFO 25852 --- [g-40-shop] [main] liquibase.command                        : Command execution complete
+2026-03-10T13:24:39.648+01:00  INFO 25852 --- [g-40-shop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-10T13:24:39.704+01:00  INFO 25852 --- [g-40-shop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-10T13:24:39.743+01:00  INFO 25852 --- [g-40-shop] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-10T13:24:39.985+01:00  INFO 25852 --- [g-40-shop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T13:24:40.944+01:00  INFO 25852 --- [g-40-shop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T13:24:40.946+01:00  INFO 25852 --- [g-40-shop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T13:24:42.006+01:00  WARN 25852 --- [g-40-shop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T13:24:42.030+01:00  INFO 25852 --- [g-40-shop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2026-03-10T13:24:42.319+01:00  INFO 25852 --- [g-40-shop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7c305624, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b4fbedb, org.springframework.security.web.context.SecurityContextHolderFilter@426753a6, org.springframework.security.web.header.HeaderWriterFilter@10ac5a14, org.springframework.web.filter.CorsFilter@73534675, org.springframework.security.web.authentication.logout.LogoutFilter@6a4ec62d, de.ait_tr.g_40_shop.security.sec_filter.TokenFilter@5ce9c9e8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22816de1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55e073c8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@550482aa, org.springframework.security.web.session.SessionManagementFilter@54c3bae, org.springframework.security.web.access.ExceptionTranslationFilter@65ff1e6d, org.springframework.security.web.access.intercept.AuthorizationFilter@428943a4]
+2026-03-10T13:24:42.586+01:00  WARN 25852 --- [g-40-shop] [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location: [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2026-03-10T13:24:42.663+01:00  INFO 25852 --- [g-40-shop] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T13:24:42.672+01:00  INFO 25852 --- [g-40-shop] [main] de.ait_tr.g_40_shop.G40ShopApplication   : Started G40ShopApplication in 6.219 seconds (process running for 6.761)
+2026-03-10T13:25:46.308+01:00  INFO 25852 --- [g-40-shop] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T13:25:46.308+01:00  INFO 25852 --- [g-40-shop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T13:25:46.309+01:00  INFO 25852 --- [g-40-shop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-10T14:11:09.693+01:00  WARN 25852 --- [g-40-shop] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m209ms258µs100ns).
+2026-03-10T14:12:41.923+01:00  INFO 25852 --- [g-40-shop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T14:12:41.931+01:00  INFO 25852 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T14:12:41.946+01:00  INFO 25852 --- [g-40-shop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
