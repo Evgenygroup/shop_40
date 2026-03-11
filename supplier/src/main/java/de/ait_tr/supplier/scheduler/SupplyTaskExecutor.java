@@ -7,7 +7,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalTime;
 import java.util.List;
 import java.util.Map;
 
@@ -17,6 +16,8 @@ public class SupplyTaskExecutor {
 
     private final HttpService httpService;
     private final RequestCalculator requestCalculator;
+
+
 
     public SupplyTaskExecutor(HttpService httpService, RequestCalculator requestCalculator) {
         this.httpService = httpService;
@@ -44,5 +45,8 @@ public class SupplyTaskExecutor {
         Map<String, Integer> supplyRequest = requestCalculator.calculateRequest(products);
 
         // 3. Отправляем заказ на е-мейл поставщику.
+
+
+
     }
 }
