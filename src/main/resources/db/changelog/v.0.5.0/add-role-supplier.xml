@@ -4,10 +4,10 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
 
-    <changeSet id="add-role-supplier" author="Eugen">
+    <changeSet id="add-role-supplier" author="Andrey">
 
         <insert tableName="role">
-            <column name="title" value="ROLE_SUPPLIER"></column>
+            <column name="title" value="ROLE_SUPPLIER"/>
         </insert>
 
     </changeSet>

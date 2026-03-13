@@ -4,13 +4,19 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
 
-    <changeSet id="add-column-quantity-to-product" author="Andrey">
+    <changeSet id="create-table-cart" author="Andrey">
 
-        <addColumn tableName="product">
-            <column name="quantity" type="int" defaultValue="0">
-                <constraints nullable="false"/>
+        <createTable tableName="cart">
+
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
             </column>
-        </addColumn>
+
+            <column name="customer_id" type="bigint">
+                <constraints nullable="false" unique="true"/>
+            </column>
+
+        </createTable>
 
     </changeSet>
 
